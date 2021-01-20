@@ -1,20 +1,59 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search" onclick="showSearchBar()"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title size="large">Games</ion-title>
+    <ion-title size="small">Winning is fun .. </ion-title>
+  </ion-toolbar>
+  <ion-toolbar hidden="true">
+    <ion-searchbar placeholder="<i>search games</i>"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card *ngFor="let game of games">
+    <ion-img src={{game.img}}></ion-img>
+    <ion-card-header>
+      <ion-card-title><strong>{{game.title}}</strong></ion-card-title>
+      <ion-card-subtitle><i>{{game.sub_title}}</i></ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>{{game.desc}}</ion-card-content>
+    <ion-footer>
+      <ion-item>
+        <ion-icon name="people-outline" slot="start"></ion-icon>
+        <small>Online players ..</small>
+        <ion-badge color="danger" slot="end"><small>{{game.online_count}}</small></ion-badge>
+      </ion-item>
+    </ion-footer>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button size="small">
+      <ion-icon name="share"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon color="dark" name="logo-vimeo"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon color="dark" name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="start">
+      <ion-fab-button>
+        <ion-icon color="dark" name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon color="dark" name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
 </ion-content>

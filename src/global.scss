@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,24 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// custom font
+@font-face {
+  font-family: mont;
+  src: url(assets/fonts/mont.ttf);
+}
+@font-face {
+  font-family: NotoSans-Bold;
+  src: url(assets/fonts/NotoSans-Bold.ttf);
+}
+@font-face {
+  font-family: NotoSans-Regular;
+  src: url(assets/fonts/NotoSans-Regular.ttf);
+}
+
+:root {
+  /* Set the font family of the entire app */
+  // --ion-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto", sans-serif;
+  --ion-font-family: NotoSans-Regular, NotoSans-Bold, mont;
+  --ion-background-color: #fbfbfb;
+}

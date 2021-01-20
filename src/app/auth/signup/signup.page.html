@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sign Up</ion-title>
+    <ion-title><small>Games - like never before .. </small></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="background-color: lightblue;">
+  <ion-card>
+    <ion-card-content>
+      <div class="input-group">
+        <ion-item>
+          <ion-input type="email" placeholder="Email: Admin"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" placeholder="Password: admin"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" placeholder="Retype Password: admin"></ion-input>
+        </ion-item>
+      </div>
+      <ion-button type="submit" expand="block" (click)='signup()'>Sign Up</ion-button>
+      <ion-button type="button" expand="block" color="primary" fill="clear" (click)="login()">Already a member? Login!
+      </ion-button>
+    </ion-card-content>
+
+    <ion-footer class="ion-padding">
+      <ion-button type="button" expand="block" color="dark">
+        <ion-icon name="logo-facebook" slot="start"></ion-icon>
+        Sign up with Facebook
+      </ion-button>
+      <ion-button type="button" expand="block" color="dark">
+        <ion-icon name="logo-google" slot="start"></ion-icon>
+        Sign up with Google
+      </ion-button>
+      <ion-button type="button" expand="block" color="dark">
+        <ion-icon name="logo-apple" slot="start"></ion-icon>
+        Sign up with Apple
+      </ion-button>
+    </ion-footer>
+  </ion-card>
+</ion-content>

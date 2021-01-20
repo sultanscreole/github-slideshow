@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+    <ion-title><small>Game till you drop .. </small></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="background-color: lightblue;">
+  <ion-card>
+    <ion-card-content>
+      <div class="input-group">
+        <ion-item>
+          <ion-input type="email" placeholder="Email: Admin"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" placeholder="Password: admin"></ion-input>
+        </ion-item>
+      </div>
+      <ion-button type="submit" expand="block" (click)='login()'>Log in</ion-button>
+      <ion-button type="button" expand="block" color="primary" fill="clear" (click)="signup()">Not yet a member? Sign up
+      </ion-button>
+      <ion-button type="button" expand="block" color="dark" fill="clear" (click)="forgotPass()"><small>Forgot
+          Password</small></ion-button>
+    </ion-card-content>
+
+    <ion-footer class="ion-padding">
+      <ion-button type="button" expand="block" color="dark" (click)="presentToastWithOptions()">
+        <ion-icon name="logo-facebook" slot="start"></ion-icon>
+        Sign in with Facebook
+      </ion-button>
+      <ion-button type="button" expand="block" color="dark" (click)="presentToastWithOptions()">
+        <ion-icon name="logo-google" slot="start"></ion-icon>
+        Sign in with Google
+      </ion-button>
+      <ion-button type="button" expand="block" color="dark"> (click)="presentToastWithOptions()"> 
+        <ion-icon name="logo-apple" slot="start"></ion-icon>
+        Sign in with Apple
+      </ion-button>
+    </ion-footer>
+  </ion-card>
+</ion-content>

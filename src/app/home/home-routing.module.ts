@@ -6,7 +6,11 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
-  }
+  },
+  // {
+  //   path: 'auth',
+  //   loadChildren: () => import('./auth/auth.module').then( m => m.AuthPageModule)
+  // }
 ];
 
 @NgModule({
